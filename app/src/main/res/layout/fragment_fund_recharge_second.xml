@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_grey"
+    tools:context=".Dashboard.Transaction.FundRecharge.FundRechargeSecondFragment">
+
+    <ScrollView
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp">
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Acc. Name: Ryhan mahmud"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:padding="4dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/accountNumber"
+                android:layout_below="@id/userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Acc. No: 0123456789"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:padding="4dp"
+                android:textStyle="bold"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_inputTransactionNumber"
+                android:layout_below="@+id/accountNumber"
+                style="@style/Widget.Shrine.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Transaction Number">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputTransactionNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:padding="16dp"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_inputAccountNumber"
+                android:layout_below="@+id/layout_inputTransactionNumber"
+                style="@style/Widget.Shrine.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Transaction Number">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputAccountNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:padding="16dp"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_below="@id/layout_inputAccountNumber"
+                android:layout_alignParentEnd="true"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Next"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:padding="8dp"
+                android:background="@drawable/input_field_bg"
+                android:layout_gravity="end"
+                />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

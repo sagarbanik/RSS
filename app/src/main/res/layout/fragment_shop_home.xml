@@ -1,0 +1,1128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".shop.ui.ShopHomeFragment"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Slider-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/sliderCardView"
+                app:cardCornerRadius="5dp"
+                android:layout_margin="16dp"
+                android:padding="16dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.smarteist.autoimageslider.SliderView
+                    android:id="@+id/imageSlider"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    app:sliderAnimationDuration="900"
+                    app:sliderAutoCycleDirection="back_and_forth"
+                    app:sliderAutoCycleEnabled="true"
+                    app:sliderIndicatorAnimationDuration="600"
+                    app:sliderIndicatorGravity="center_horizontal|bottom"
+                    app:sliderIndicatorMargin="15dp"
+                    app:sliderIndicatorOrientation="horizontal"
+                    app:sliderIndicatorPadding="3dp"
+                    app:sliderIndicatorRadius="2dp"
+                    app:sliderIndicatorSelectedColor="#5A5A5A"
+                    app:sliderIndicatorUnselectedColor="#FFF"
+                    app:sliderScrollTimeInSec="1"
+                    app:sliderStartAutoCycle="true" />
+
+            </androidx.cardview.widget.CardView>
+
+            <!--Topics-->
+            <LinearLayout
+                android:id="@+id/topics"
+                android:layout_below="@+id/sliderCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/topicRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <!--Shop Main Section 1-->
+            <RelativeLayout
+                android:id="@+id/sectionT1"
+                android:layout_below="@id/topics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="12dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="12dp"
+                android:background="@drawable/shop_main_section_bg">
+
+                <!--Title,caption,design-->
+                <RelativeLayout
+                    android:id="@+id/upper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="12dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentStart="true"
+                        android:background="@drawable/blue_shape" />
+
+                    <LinearLayout
+                        android:layout_toEndOf="@+id/view1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".65"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/headline11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="24dp"
+                                android:text="Evaly T7"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tagLine11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="24dp"
+                                android:text="Delivery within 7 Days"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                                android:textColor="#333333"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".35"
+                            android:orientation="vertical"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_gravity="center_vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/home_task_bg"
+                                android:elevation="1.5dp"
+                                android:orientation="horizontal"
+                                android:layout_gravity="end"
+                                android:paddingTop="4dp"
+                                android:paddingBottom="4dp"
+                                android:paddingEnd="4dp"
+                                android:paddingStart="12dp"
+                                android:gravity="center"
+                                android:layout_margin="2dp"
+                                >
+
+                                <TextView
+                                    android:id="@+id/showMore11"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="More"
+                                    android:textColor="#666666"
+                                    android:textAlignment="center"/>
+
+                                <ImageView
+                                    android:id="@+id/icon11"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_right_arrow"
+                                    app:tint="#666666" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/productRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/upper"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp" />
+
+            </RelativeLayout>
+
+            <!--Shop Main Section 2-->
+            <RelativeLayout
+                android:id="@+id/sectionT2"
+                android:layout_below="@id/sectionT1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="12dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="12dp"
+                android:background="@drawable/shop_main_section_bg">
+
+                <!--Title,caption,design-->
+                <RelativeLayout
+                    android:id="@+id/upper1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="12dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentStart="true"
+                        android:background="@drawable/green_shape"/>
+                    <LinearLayout
+                        android:layout_toEndOf="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".65"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/headline22"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="24dp"
+                                android:text="Evaly T5"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tagLine22"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="24dp"
+                                android:text="Delivery within 5 Days"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                                android:textColor="#333333"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".35"
+                            android:orientation="vertical"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_gravity="center_vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/home_task_bg"
+                                android:elevation="1.5dp"
+                                android:orientation="horizontal"
+                                android:layout_gravity="end"
+                                android:paddingTop="4dp"
+                                android:paddingBottom="4dp"
+                                android:paddingEnd="4dp"
+                                android:paddingStart="12dp"
+                                android:gravity="center"
+                                android:layout_margin="2dp"
+                                >
+
+                                <TextView
+                                    android:id="@+id/showMore22"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="More"
+                                    android:textColor="#666666"
+                                    android:textAlignment="center"/>
+
+                                <ImageView
+                                    android:id="@+id/icon22"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_right_arrow"
+                                    app:tint="#666666" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--<TextView
+                        android:id="@+id/headline1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="24dp"
+                        android:text="Evaly T5"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"/>
+                    <TextView
+                        android:id="@+id/tagLine1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/headline1"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="24dp"
+                        android:text="Delivery within 5 Days"
+                        android:textColor="#333333"
+                        android:textStyle="normal"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="24dp"
+                        android:elevation="1dp"
+                        android:padding="12dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/home_task_bg">
+
+                        <TextView
+                            android:id="@+id/showMore1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#666666"
+                            android:text="Show More"/>
+
+                        <ImageView
+                            android:id="@+id/icon1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_right_arrow"
+                            app:tint="#666666" />
+
+                    </LinearLayout>-->
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/productRv1"
+                    android:layout_margin="16dp"
+                    android:layout_below="@+id/upper1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <!--Shop Main Section 3-->
+            <RelativeLayout
+                android:id="@+id/sectionT3"
+                android:layout_below="@id/sectionT2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="12dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="12dp"
+                android:background="@drawable/shop_main_section_bg">
+
+                <!--Title,caption,design-->
+                <RelativeLayout
+                    android:id="@+id/upper2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="12dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentStart="true"
+                        android:background="@drawable/red_shape"/>
+                    <LinearLayout
+                        android:layout_toEndOf="@+id/view3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".65"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/headline33"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="24dp"
+                                android:text="Evaly T3"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tagLine33"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="24dp"
+                                android:text="Delivery within 3 Days"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                                android:textColor="#333333"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".35"
+                            android:orientation="vertical"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_gravity="center_vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/home_task_bg"
+                                android:elevation="1.5dp"
+                                android:orientation="horizontal"
+                                android:layout_gravity="end"
+                                android:paddingTop="4dp"
+                                android:paddingBottom="4dp"
+                                android:paddingEnd="4dp"
+                                android:paddingStart="12dp"
+                                android:gravity="center"
+                                android:layout_margin="2dp"
+                                >
+
+                                <TextView
+                                    android:id="@+id/showMore33"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="More"
+                                    android:textColor="#666666"
+                                    android:textAlignment="center"/>
+
+                                <ImageView
+                                    android:id="@+id/icon33"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_right_arrow"
+                                    app:tint="#666666" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/productRv2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/upper2"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp" />
+
+            </RelativeLayout>
+
+            <!--Shop Main Section 4-->
+            <RelativeLayout
+                android:id="@+id/sectionT4"
+                android:layout_below="@id/sectionT3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="12dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="12dp"
+                android:background="@drawable/shop_main_section_bg">
+
+                <!--Title,caption,design-->
+                <RelativeLayout
+                    android:id="@+id/upper3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:id="@+id/view4"
+                        android:layout_width="12dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentStart="true"
+                        android:background="@drawable/black_shape"/>
+                    <LinearLayout
+                        android:layout_toEndOf="@+id/view4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".65"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/headline44"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginStart="24dp"
+                                android:text="SME COD Store (B2B)"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tagLine44"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="24dp"
+                                android:text="For SME Retailer"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                                android:textColor="#333333"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".35"
+                            android:orientation="vertical"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_gravity="center_vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/home_task_bg"
+                                android:elevation="1.5dp"
+                                android:orientation="horizontal"
+                                android:layout_gravity="end"
+                                android:paddingTop="4dp"
+                                android:paddingBottom="4dp"
+                                android:paddingEnd="4dp"
+                                android:paddingStart="12dp"
+                                android:gravity="center"
+                                android:layout_margin="2dp"
+                                >
+
+                                <TextView
+                                    android:id="@+id/showMore44"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="More"
+                                    android:textColor="#666666"
+                                    android:textAlignment="center"/>
+
+                                <ImageView
+                                    android:id="@+id/icon44"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_right_arrow"
+                                    app:tint="#666666" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/productRv3"
+                    android:layout_margin="16dp"
+                    android:layout_below="@+id/upper3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <!--Shop Main Section 5-->
+            <RelativeLayout
+                android:id="@+id/sectionT5"
+                android:layout_below="@id/sectionT4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="12dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="12dp"
+                android:background="@drawable/shop_main_section_bg">
+
+                <!--Title,caption,design-->
+                <RelativeLayout
+                    android:id="@+id/upper4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:id="@+id/view5"
+                        android:layout_width="12dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentStart="true"
+                        android:background="@drawable/black_shape"/>
+                    <LinearLayout
+                        android:layout_toEndOf="@+id/view5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".65"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/headline55"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="24dp"
+                                android:text="Evaly Priority Store"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tagLine55"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="24dp"
+                                android:text="Priority Services!"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                                android:textColor="#333333"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".35"
+                            android:orientation="vertical"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_gravity="center_vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/home_task_bg"
+                                android:elevation="1.5dp"
+                                android:orientation="horizontal"
+                                android:layout_gravity="end"
+                                android:paddingTop="4dp"
+                                android:paddingBottom="4dp"
+                                android:paddingEnd="4dp"
+                                android:paddingStart="12dp"
+                                android:gravity="center"
+                                android:layout_margin="2dp"
+                                >
+
+                                <TextView
+                                    android:id="@+id/showMore55"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="More"
+                                    android:textColor="#666666"
+                                    android:textAlignment="center"/>
+
+                                <ImageView
+                                    android:id="@+id/icon55"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_right_arrow"
+                                    app:tint="#666666" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/productRv4"
+                    android:layout_margin="16dp"
+                    android:layout_below="@+id/upper4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <!--Shop Main Section 6 Evaly Express + Vendors COD  + category + Brand + Prod-->
+            <RelativeLayout
+                android:id="@+id/sectionT6"
+                android:layout_below="@id/sectionT5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="12dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="12dp"
+                android:background="@drawable/shop_main_section_bg">
+
+                <!--Title,caption,design-->
+                <RelativeLayout
+                    android:id="@+id/upper5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".65"
+                            android:orientation="vertical"
+                            android:layout_gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/headline66"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="24dp"
+                                android:text="Evaly Express"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".35"
+                            android:orientation="vertical"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_gravity="center_vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/home_task_bg"
+                                android:elevation="1.5dp"
+                                android:orientation="horizontal"
+                                android:layout_gravity="end"
+                                android:paddingTop="4dp"
+                                android:paddingBottom="4dp"
+                                android:paddingEnd="4dp"
+                                android:paddingStart="12dp"
+                                android:gravity="center"
+                                android:layout_margin="2dp"
+                                >
+
+                                <TextView
+                                    android:id="@+id/showMore66"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="All"
+                                    android:textColor="#666666"
+                                    android:textAlignment="center"/>
+
+                                <ImageView
+                                    android:id="@+id/icon66"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_right_arrow"
+                                    app:tint="#666666" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/expressRV"
+                    android:layout_margin="16dp"
+                    android:layout_below="@+id/upper5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <!-- Vendor COD-->
+                <RelativeLayout
+                    android:id="@+id/sectionT7"
+                    android:layout_below="@id/expressRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!--Title,caption,design-->
+                    <RelativeLayout
+                        android:id="@+id/upper6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".65"
+                                android:orientation="vertical"
+                                android:layout_gravity="center_vertical">
+
+                                <TextView
+                                    android:id="@+id/headline77"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="24dp"
+                                    android:text="Shops - Cash on Delivery"
+                                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".35"
+                                android:orientation="vertical"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_gravity="center_vertical">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/home_task_bg"
+                                    android:elevation="1.5dp"
+                                    android:orientation="horizontal"
+                                    android:layout_gravity="end"
+                                    android:paddingTop="4dp"
+                                    android:paddingBottom="4dp"
+                                    android:paddingEnd="4dp"
+                                    android:paddingStart="12dp"
+                                    android:gravity="center"
+                                    android:layout_margin="2dp"
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/showMore77"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="All"
+                                        android:textColor="#666666"
+                                        android:textAlignment="center"/>
+
+                                    <ImageView
+                                        android:id="@+id/icon77"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/ic_right_arrow"
+                                        app:tint="#666666" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/vendorCODRV"
+                        android:layout_margin="16dp"
+                        android:layout_below="@+id/upper6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+                <!-- Category-->
+                <RelativeLayout
+                    android:id="@+id/sectionT8"
+                    android:layout_below="@id/sectionT7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!--Title,caption,design-->
+                    <RelativeLayout
+                        android:id="@+id/upper7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".65"
+                                android:orientation="vertical"
+                                android:layout_gravity="center_vertical">
+
+                                <TextView
+                                    android:id="@+id/headline88"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="24dp"
+                                    android:text="Categories for you"
+                                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".35"
+                                android:orientation="vertical"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_gravity="center_vertical">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/home_task_bg"
+                                    android:elevation="1.5dp"
+                                    android:orientation="horizontal"
+                                    android:layout_gravity="end"
+                                    android:paddingTop="4dp"
+                                    android:paddingBottom="4dp"
+                                    android:paddingEnd="4dp"
+                                    android:paddingStart="12dp"
+                                    android:gravity="center"
+                                    android:layout_margin="2dp"
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/showMore88"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="All"
+                                        android:textColor="#666666"
+                                        android:textAlignment="center"/>
+
+                                    <ImageView
+                                        android:id="@+id/icon88"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/ic_right_arrow"
+                                        app:tint="#666666" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/categoriesRV"
+                        android:layout_margin="16dp"
+                        android:layout_below="@+id/upper7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+                <!-- Brand -->
+                <RelativeLayout
+                    android:id="@+id/sectionT9"
+                    android:layout_below="@id/sectionT8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!--Title,caption,design-->
+                    <RelativeLayout
+                        android:id="@+id/upper8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".65"
+                                android:orientation="vertical"
+                                android:layout_gravity="center_vertical">
+
+                                <TextView
+                                    android:id="@+id/headline99"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="24dp"
+                                    android:text="Brands for you"
+                                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".35"
+                                android:orientation="vertical"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_gravity="center_vertical">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/home_task_bg"
+                                    android:elevation="1.5dp"
+                                    android:orientation="horizontal"
+                                    android:layout_gravity="end"
+                                    android:paddingTop="4dp"
+                                    android:paddingBottom="4dp"
+                                    android:paddingEnd="4dp"
+                                    android:paddingStart="12dp"
+                                    android:gravity="center"
+                                    android:layout_margin="2dp"
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/showMore99"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="All"
+                                        android:textColor="#666666"
+                                        android:textAlignment="center"/>
+
+                                    <ImageView
+                                        android:id="@+id/icon99"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/ic_right_arrow"
+                                        app:tint="#666666" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/brandsRV"
+                        android:layout_margin="16dp"
+                        android:layout_below="@+id/upper8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+                <!-- Rand Prod -->
+                <RelativeLayout
+                    android:id="@+id/sectionT10"
+                    android:layout_below="@id/sectionT9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!--Title,caption,design-->
+                    <RelativeLayout
+                        android:id="@+id/upper9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".65"
+                                android:orientation="vertical"
+                                android:layout_gravity="center_vertical">
+
+                                <TextView
+                                    android:id="@+id/headline10"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="24dp"
+                                    android:text="Products"
+                                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/productRandRV"
+                        android:layout_margin="16dp"
+                        android:layout_below="@+id/upper9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

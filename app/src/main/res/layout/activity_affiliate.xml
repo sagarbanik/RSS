@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/drawerLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:background="@color/white_grey"
+    tools:context=".Dashboard.Affiliate.AffiliateActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appbarlayout_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"
+                    tools:context=".home.HomeActivity"
+                    app:title="Affiliate"
+                    app:titleTextColor="@color/white"
+                    app:navigationIcon="@drawable/ic_menu">
+
+                    <!--<RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp">
+
+                        <ImageView
+                            android:id="@+id/img_back_arrow"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@drawable/ic_back_arrow_white"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            />
+
+                        <TextView
+                            android:id="@+id/text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Affiliate"
+                            android:textColor="#FFFFFF"
+                            android:textAlignment="center"
+                            android:textSize="24sp"
+                            android:layout_toEndOf="@+id/img_back_arrow"
+                            android:layout_toStartOf="@id/drawerMenu"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"/>
+
+                        <ImageView
+                            android:id="@+id/drawerMenu"
+                            android:layout_width="50dp"
+                            android:layout_height="40dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:src="@drawable/ic_menu"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"/>
+
+                    </RelativeLayout>-->
+
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--Slider-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/sliderCardView"
+                    app:cardCornerRadius="15dp"
+                    android:layout_margin="16dp"
+                    android:padding="16dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.smarteist.autoimageslider.SliderView
+                        android:id="@+id/imageSlider"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        app:sliderAnimationDuration="900"
+                        app:sliderAutoCycleDirection="back_and_forth"
+                        app:sliderAutoCycleEnabled="true"
+                        app:sliderIndicatorAnimationDuration="600"
+                        app:sliderIndicatorGravity="center_horizontal|bottom"
+                        app:sliderIndicatorMargin="15dp"
+                        app:sliderIndicatorOrientation="horizontal"
+                        app:sliderIndicatorPadding="3dp"
+                        app:sliderIndicatorRadius="2dp"
+                        app:sliderIndicatorSelectedColor="#5A5A5A"
+                        app:sliderIndicatorUnselectedColor="#FFF"
+                        app:sliderScrollTimeInSec="1"
+                        app:sliderStartAutoCycle="true" />
+
+                </androidx.cardview.widget.CardView>
+
+                <!--Topics-->
+                <LinearLayout
+                    android:id="@+id/topics"
+                    android:layout_below="@+id/sliderCardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="16dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/topicRV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <!--Store/Product-->
+                <LinearLayout
+                    android:id="@+id/store"
+                    android:layout_below="@id/topics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.8"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Superfinix Store"
+                            android:textColor="@color/black"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/view_all_products"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:orientation="horizontal"
+                        android:layout_marginEnd="8dp"
+                        android:layout_margin="4dp"
+                        android:elevation="1dp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:background="@drawable/round_border">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Show More"
+                            android:textColor="@color/black"
+                            android:textAlignment="textStart"
+                            android:padding="8dp"
+                            android:layout_marginStart="4dp"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_keyboard_arrow_right"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/prod"
+                    android:layout_below="@id/store"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="16dp">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/productRV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <!--Shop-->
+                <LinearLayout
+                    android:id="@+id/shop"
+                    android:layout_below="@id/prod"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.8"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Shops - Cash on Delivery"
+                            android:textColor="@color/black"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/view_all_shop"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:orientation="horizontal"
+                        android:layout_marginEnd="8dp"
+                        android:layout_margin="4dp"
+                        android:elevation="1dp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:background="@drawable/round_border">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Show More"
+                            android:textColor="@color/black"
+                            android:textAlignment="textStart"
+                            android:padding="8dp"
+                            android:layout_marginStart="4dp"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_keyboard_arrow_right"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/all_shop"
+                    android:layout_below="@id/shop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/shopsRV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <!--Categories-->
+                <LinearLayout
+                    android:id="@+id/categories"
+                    android:layout_below="@id/all_shop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.8"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Categories for you"
+                            android:textColor="@color/black"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/view_all_category"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:orientation="horizontal"
+                        android:layout_marginEnd="8dp"
+                        android:layout_margin="4dp"
+                        android:elevation="1dp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:background="@drawable/round_border">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Show More"
+                            android:textColor="@color/black"
+                            android:textAlignment="textStart"
+                            android:padding="8dp"
+                            android:layout_marginStart="4dp"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_keyboard_arrow_right"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/all_cat"
+                    android:layout_below="@id/categories"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/categoriesRV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <!--Brands-->
+                <LinearLayout
+                    android:id="@+id/brands"
+                    android:layout_below="@id/all_cat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.8"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Brand for you"
+                            android:textColor="@color/black"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/view_all_brand"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:orientation="horizontal"
+                        android:layout_marginEnd="8dp"
+                        android:elevation="1dp"
+                        android:layout_margin="4dp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:background="@drawable/round_border">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Show More"
+                            android:textColor="@color/black"
+                            android:textAlignment="textStart"
+                            android:padding="8dp"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:src="@drawable/ic_keyboard_arrow_right"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/all_brand"
+                    android:layout_below="@id/brands"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="16dp"
+                    android:orientation="vertical">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/brandsRV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <!--Random Product-->
+                <LinearLayout
+                    android:id="@+id/randomProd"
+                    android:layout_below="@id/all_brand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Products"
+                            android:textColor="@color/black"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/randProd"
+                    android:layout_below="@id/randomProd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="16dp"
+                    android:orientation="vertical">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/randProdRV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_gravity="start"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        app:menu="@menu/drawer_menu"
+        app:itemIconTint="@color/colorPrimary"
+        app:itemIconSize="36dp"
+        app:elevation="6dp"
+        app:itemTextAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:headerLayout="@layout/nav_header_layout"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,139 @@
+<resources>
+    <string name="app_name">Super Finix</string>
+    <string name="title_activity_bottom_navigation">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="rss_error_password">Password minimum length should be six</string>
+    <string name="appSlogan">Your trust, our foundation</string>
+    <string name="navigation_drawer_open">Drawer Open</string>
+    <string name="navigation_drawer_close">Drawer Close</string>
+
+    <string-array name="packageArray">
+        <item>Package-1</item>
+        <item>Package-2</item>
+        <item>Package-3</item>
+        <item>Package-4</item>
+        <item>Package-5</item>
+        <item>Package-6</item>
+        <item>Package-7</item>
+        <item>Package-8</item>
+    </string-array>
+
+    <string-array name="education_array">
+        <item>JSC</item>
+        <item>SSC</item>
+        <item>HSC</item>
+        <item>Diploma</item>
+        <item>Vocational</item>
+        <item>Honors</item>
+        <item>Masters</item>
+        <item>PHD</item>
+    </string-array>
+
+    <string-array name="expertise_area_array">
+        <item>Web Design</item>
+        <item>Web Development</item>
+        <item>Graphics Design</item>
+        <item>Digital Marketing</item>
+        <item>Programmer</item>
+        <item>Data Entry</item>
+        <item>Software Developer</item>
+        <item>Networking</item>
+        <item>IT and Support</item>
+    </string-array>
+
+    <string-array name="service_array">
+        <item>Virtual Service</item>
+        <item>Outdoor Service</item>
+    </string-array>
+
+    <string-array name="outdoor_service_array">
+        <item>Server service and support</item>
+        <item>Networking services</item>
+        <item>Hardware services</item>
+        <item>CCTV installation</item>
+        <item>Other Services</item>
+    </string-array>
+
+    <string-array name="social_media_promotion_array">
+        <item>Facebook page promotion</item>
+        <item>Twitter account promotion</item>
+        <item>Instagram account promotion</item>
+        <item>Tiktok promotion</item>
+        <item>Youtube Channel subscription</item>
+        <item>Apps download</item>
+    </string-array>
+
+    <!--Car Promotion-->
+    <string-array name="car_ad_categories">
+        <item>Outside car</item>
+        <item>Inside car</item>
+        <item>Digital ooh</item>
+    </string-array>
+
+    <string-array name="outside_car_array">
+        <item>Simple</item>
+        <item>Partial</item>
+        <item>Advance</item>
+    </string-array>
+
+    <string-array name="inside_car_array">
+        <item>Branding</item>
+        <item>Activation</item>
+        <item>Retail(sales)</item>
+    </string-array>
+
+    <string-array name="digital_ooh_array">
+        <item>Driver play</item>
+        <item>Taxi top</item>
+    </string-array>
+
+    <!--Email Promotion-->
+    <string-array name="email_cat_array">
+        <item>With email</item>
+        <item>Without email</item>
+    </string-array>
+
+    <string-array name="item_array">
+        <item>item 1</item>
+        <item>item 2</item>
+    </string-array>
+
+    <string-array name="package_array">
+        <item>pack 1</item>
+        <item>pack 2</item>
+    </string-array>
+
+    <!--SMS Promotion-->
+    <string-array name="sms_cat_array">
+        <item>Masking SMS</item>
+        <item>Non-Masking SMS</item>
+    </string-array>
+
+    <string-array name="item_array1">
+        <item>1000 sms at 50 BDT</item>
+        <item>10000 sms at 450 BDT</item>
+    </string-array>
+
+    <string-array name="package_array1">
+        <item>100 sms at 50 BDT</item>
+        <item>1000 sms at 450 BDT</item>
+    </string-array>
+
+
+    <string name="title_activity_ecommerce_home">EcommerceHomeActivity</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="title_activity_shopping">ShoppingActivity</string>
+
+</resources>

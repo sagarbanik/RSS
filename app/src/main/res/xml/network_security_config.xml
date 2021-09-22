@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true" />
+    <domain-config>
+        <domain includeSubdomains="true"
+            cleartextTrafficPermitted="true">192.168.0.26:8000</domain>
+        <domain includeSubdomains="true"
+            cleartextTrafficPermitted="true">192.168.0.103</domain>
+        <domain includeSubdomains="true"
+            cleartextTrafficPermitted="true">192.168.0.26</domain>
+        <domain includeSubdomains="true"
+            cleartextTrafficPermitted="true">192.168.0.29</domain>
+        <domain includeSubdomains="true"
+            cleartextTrafficPermitted="true">http://realtrading.xyz/</domain>
+        <domain includeSubdomains="true"
+            cleartextTrafficPermitted="true">http://urmartbd.com/</domain>
+        <domain includeSubdomains="true"
+            cleartextTrafficPermitted="true">192.168.0.109:8000</domain>
+    </domain-config>
+</network-security-config>

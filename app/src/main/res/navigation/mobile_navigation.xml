@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home_shop">
+
+    <fragment
+        android:id="@+id/nav_home_shop"
+        android:name="com.rss.rss.shop.ui.ShopHomeFragment"
+        android:label="Affiliate"
+        tools:layout="@layout/fragment_shop_home" />
+
+    <fragment
+        android:id="@+id/nav_wishlist"
+        android:name="com.rss.rss.shop.ui.WishlistFragment"
+        android:label="Wishlist"
+        tools:layout="@layout/fragment_wishlist"/>
+
+    <!--<fragment
+        android:id="@+id/nav_sign_out"
+        android:name="com.bdmcq.android.ui.signout.SignoutFragment"
+        android:label="সাইন আউট"
+        tools:layout="@layout/fragment_signout">
+        <action
+            android:id="@+id/action_nav_sign_out_self"
+            app:destination="@id/nav_sign_out" />
+    </fragment>-->
+
+</navigation>
